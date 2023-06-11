@@ -91,8 +91,8 @@ export default function Game() {
                 </ul>
             </div>
             <div className="right">
-                    <img src={game.background_image} className="game-image" />
-                    <img src={game.background_image_additional} className="game-image" />
+                    <img src={game.background_image} alt={game.slug} className="game-image" />
+                    <img src={game.background_image_additional} alt={game.slug} className="game-image" />
             </div>
             
 

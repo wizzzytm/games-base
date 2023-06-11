@@ -16,7 +16,7 @@ export default function Home(props) {
             {filtered.map(game => (
                 <Link to={game.slug.toString()} key={game.id}>
                    <div className="card">
-                        <img fetchpriority="high" src={game.background_image} className="image" />
+                        <img alt={game.slug} fetchpriority="high" src={game.background_image} className="image" />
                         <div className="info">
                             <h4 className="title">{game.name}</h4>
                             <p className="rating">{game.rating}/5</p>
