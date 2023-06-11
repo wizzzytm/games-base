@@ -190,3 +190,26 @@ ul, li {
 .game-platforms{
     margin-bottom: 10px;
 }
+
+.gameError {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.gameError a {
+    color: aqua;
+}
+
+.gameError h2 {
+    font-style: italic;
+    font-size: 36px;
+}

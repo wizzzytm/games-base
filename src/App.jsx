@@ -10,6 +10,7 @@ import './App.css'
 import Home, {gamesLoader} from "./pages/Home"
 import RootLayout from "./layouts/RootLayout"
 import Game, { gameLoader } from "./pages/Game"
+import GameError from "./pages/GameError"
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout query={searchData} setQuery={setSearchData}/>}>
         <Route index element={<Home queryInfo={searchData} />} loader={gamesLoader} />
-        <Route path=":slug" element={<Game />} loader={gameLoader} />
+        <Route path=":slug" errorElement={<GameError/>} element={<Game />} loader={gameLoader} />
       </Route>
     ))
 

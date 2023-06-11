@@ -110,6 +110,10 @@ export const gameLoader = async ({params}) => {
 
     const res = await fetch(`https://api.rawg.io/api/games/${slug}?key=72a666f55c724008991b5a43690df520`, requestOptions)
     
+    if(!res.ok) {
+        throw Error("This place doesn't exist")
+    }
+
     return res.json()
 }
 
