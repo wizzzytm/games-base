@@ -1,7 +1,7 @@
 import { useLoaderData, Link } from "react-router-dom"
 import { useEffect, useState, useMemo } from "react"
 
-export default function Home2(props) {
+export default function Home3(props) {
     const games = useLoaderData()
 
     const filtered = useMemo(()=>{
@@ -29,7 +29,7 @@ export default function Home2(props) {
         <div className="footer">
                 <Link to="2">
                     <div className="next-page">
-                        Next
+                        Prev
                     </div>
                 </Link>
         </div>
@@ -42,7 +42,7 @@ var requestOptions = {
      redirect: 'follow',
      allow: 'GET'
 };
-export const gamesLoader = async () => {
-    const res = await fetch("https://api.rawg.io/api/games?key=72a666f55c724008991b5a43690df520&page=1&page_size=40", requestOptions)
+export const gamesLoader3 = async () => {
+    const res = await fetch("https://api.rawg.io/api/games?key=72a666f55c724008991b5a43690df520&page=2&page_size=40", requestOptions)
     return res.json()
 }

@@ -27,9 +27,9 @@ export default function Home2(props) {
             ))}
         </div>
         <div className="footer">
-                <Link to="2">
+                <Link to="1">
                     <div className="next-page">
-                        Next
+                        Prev
                     </div>
                 </Link>
         </div>
@@ -42,7 +42,7 @@ var requestOptions = {
      redirect: 'follow',
      allow: 'GET'
 };
-export const gamesLoader = async () => {
-    const res = await fetch("https://api.rawg.io/api/games?key=72a666f55c724008991b5a43690df520&page=1&page_size=40", requestOptions)
+export const gamesLoader2 = async () => {
+    const res = await fetch("https://api.rawg.io/api/games?key=72a666f55c724008991b5a43690df520&page=2&page_size=40", requestOptions)
     return res.json()
 }

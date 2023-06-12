@@ -82,6 +82,7 @@ export default function Game() {
                         return <li>{platformX}</li>
                     })}
                 </ul>
+                <br></br>
                 Genres:
                 <ul className="game-genres">
                     

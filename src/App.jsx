@@ -11,6 +11,8 @@ import Home, {gamesLoader} from "./pages/Home"
 import RootLayout from "./layouts/RootLayout"
 import Game, { gameLoader } from "./pages/Game"
 import GameError from "./pages/GameError"
+import Home2, {gamesLoader2} from "./pages/Home2"
+
 
 
 function App() {
@@ -38,7 +40,9 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout query={searchData} setQuery={setSearchData}/>}>
         <Route index element={<Home queryInfo={searchData} />} loader={gamesLoader} />
+        <Route path="2" element={<Home2 queryInfo={searchData} />} loader={gamesLoader2} />
         <Route path=":slug" errorElement={<GameError/>} element={<Game />} loader={gameLoader} />
+        <Route path="/2/:slug" errorElement={<GameError/>} element={<Game />} loader={gameLoader} />
       </Route>
     ))
 
